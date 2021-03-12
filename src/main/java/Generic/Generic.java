@@ -1,29 +1,23 @@
 package Generic;
 
 
-    public class Generic <D extends Comparable<D>> {
+import java.util.Arrays;
 
-        D A, B, C;
+public class Generic <D extends Comparable<D>> {
 
-        private Generic(D A, D B, D C) {
-            this.A = A;
-            this.B = B;
-            this.C = C;
+        D [] max;
+
+
+        public Generic(D...max)
+        {
+            this.max=max;
         }
 
-        public D getmaximum() {
-            return Generic.Maximum(A, B, C);
+        public <T extends Comparable<T>> T maximum()
+        {
+            Arrays.sort(max);
+            return (T) max[max.length-1];
         }
 
-    }
-
-        public String <D extends comparable <D>> D Maximum (D A, D B, D C ) {
-            if (A.compareTo(B) > 0 && A.compareTo(C) > 0)
-                return A;
-            else if (B.compareTo(C) > 0 && B.compareTo(C) > 0)
-                return B;
-            else
-                return C;
-        }
 
     }
