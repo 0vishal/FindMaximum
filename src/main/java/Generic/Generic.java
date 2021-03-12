@@ -17,8 +17,8 @@ public class Generic <D extends Comparable<D>> {
         {
             Arrays.sort(max);
             int result = (T) max[max.length-1];
-            PrintMaximum();
-            return max;
+            PrintMaximum(result);
+            return result;
 
         }
         public static <T> void PrintMaximum(D result)
