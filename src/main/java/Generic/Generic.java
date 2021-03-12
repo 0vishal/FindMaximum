@@ -16,8 +16,14 @@ public class Generic <D extends Comparable<D>> {
         public <T extends Comparable<T>> T maximum()
         {
             Arrays.sort(max);
-            return (T) max[max.length-1];
-        }
+            int result = (T) max[max.length-1];
+            PrintMaximum();
+            return max;
 
+        }
+        public static <T> void PrintMaximum(D result)
+        {
+        System.out.println("Maximum is:  "+result);
+        }
 
     }
