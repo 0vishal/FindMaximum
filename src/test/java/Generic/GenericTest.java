@@ -8,19 +8,19 @@ import org.junit.jupiter.api.Assertions;
     @Test
     public void GetMaximum() {
         Generic max= new Generic();
-        Double value = (Double) max.Maximum(30.0,20.0,10.0);
-        Assertions.assertEquals(30.0, value);
+        String value = max.Maximum("Apple","Peach","Banana");
+        Assertions.assertEquals("Apple",value);
     }
     @Test
         public void GetMaximum() {
             Generic max= new Generic();
-        Double value = (Double) max.Maximum(20.0,30.0,10.0);
-            Assertions.assertEquals(30.0, value);
+        String value = max.Maximum("Apple","Peach","Banana");
+            Assertions.assertEquals("Peach",value);
         }
         @Test
         public void GetMaximum() {
             Generic max= new Generic();
-            Double value = (Double) max.Maximum(10.0,20.0,30.0);
-            Assertions.assertEquals(30, value);
+            String value = max.Maximum("Apple","Peach","Banana");
+            Assertions.assertEquals("Banana",value);
         }
 }
